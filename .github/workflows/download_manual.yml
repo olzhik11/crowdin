@@ -22,6 +22,7 @@ jobs:
           download_translations: true
           create_pull_request: false
           push_translations: true
+          branch: ${{ github.event.inputs.target_branch }} # Push to the same branch
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
