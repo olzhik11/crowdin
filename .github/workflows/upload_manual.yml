@@ -1,10 +1,7 @@
-name: Crowdin Action Upload
+name: Crowdin Action Upload Manual
 
 on:
-  push:
-    paths: ['src/locale/**']
-    branches:
-      - 'stack/**'
+  workflow_dispatch:
 
 jobs:
   crowdin:

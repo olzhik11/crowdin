@@ -1,4 +1,4 @@
-name: Crowdin Action Download
+name: Crowdin Action Download on Push
 
 on:
   push:
@@ -18,16 +18,12 @@ jobs:
       - name: Synchronize with Crowdin
         uses: crowdin/github-action@v2
         with:
-          # Don't upload translations
           upload_sources: false
           upload_translations: false
           download_translations: true
-          localization_branch_name: l10n_crowdin_translations
+          create_pull_request: false
+          push_translations: false
 
-          create_pull_request: true
-          pull_request_title: '${{ github.ref_name }} crowdin translations'
-          pull_request_body: 'New Crowdin pull request with translations'
-          pull_request_base_branch_name: 'main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
