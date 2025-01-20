@@ -22,11 +22,7 @@ jobs:
           download_translations: true
           create_pull_request: false
           push_translations: true
-<<<<<<< Updated upstream
-          branch: ${{ github.event.inputs.target_branch }} # Push to the same branch
-=======
           localization_branch_name: ${{ github.ref_name }}
->>>>>>> Stashed changes
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
