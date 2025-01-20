@@ -22,7 +22,7 @@ jobs:
           download_translations: true
           create_pull_request: false
           push_translations: true
-          localization_branch_name: ${{ github.ref_name }}
+          branch: ${{ github.ref_name }}
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
