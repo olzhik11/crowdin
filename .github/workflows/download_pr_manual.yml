@@ -1,7 +1,12 @@
-name: Crowdin Action Download Manual
+name: Crowdin Action Download PR Manual
 
 on:
   workflow_dispatch:
+    inputs:
+      branch_name:
+        description: Branch name (prefix with feature name)
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -22,6 +27,7 @@ jobs:
           download_translations: true
           create_pull_request: false
           push_translations: true
+          localization_branch_name: ${{ inputs.branch_name }}
           branch: ${{ github.ref_name }}
 
         env:
