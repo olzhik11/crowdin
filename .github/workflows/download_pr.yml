@@ -3,6 +3,8 @@ name: Crowdin Action Download PR
 on:
   push:
     branches: [ main ]
+    paths:
+      - src/locale/**
 
 permissions:
   contents: write
