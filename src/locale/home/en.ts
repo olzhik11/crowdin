@@ -4,4 +4,5 @@ export default {
   subtitle: "Welcome to Crowdin intergration POC",
   save: "Save",
   update: "Update",
+  new: "New",
 };
