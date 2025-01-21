@@ -3,5 +3,6 @@ export default {
   description: "환영합니다 Crowdin",
   subtitle: "환영합니다 Crowdin",
   save: "저장",
-  update: "업데이트"
+  update: "최신 정보",
+  new: "새"
 };
